@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="note"
+            type="com.theappland.notetakingapp.model.NoteModel" />
+        <variable
+            name="listener"
+            type="com.theappland.notetakingapp.adapter.NoteClickListener" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:orientation="horizontal"
+        android:onClick="@{listener::onNoteClicked}">
+
+        <TextView
+            android:id="@+id/noteUuidTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="@{String.valueOf(note.uuid)}">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/noteTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{note.noteTitle}"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="start"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1">
+        </TextView>
+
+        <TextView
+            android:id="@+id/noteDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{note.noteDate}"
+            android:textSize="20sp"
+            android:gravity="end"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_weight="1">
+        </TextView>
+
+    </LinearLayout>
+</layout>
