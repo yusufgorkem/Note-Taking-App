@@ -8,7 +8,7 @@
 
 ## **Used**
 
-### MVVM, Live Data, SQLite-Room, Data Binding, Coroutines <br/> <br/>
+### MVVM, SQLite-Room, Live Data, Data Binding, Coroutines <br/> <br/>
 
 ## **Screenshots**
 
